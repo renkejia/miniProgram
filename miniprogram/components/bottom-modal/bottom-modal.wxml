@@ -1,0 +1,9 @@
+<view class="modal-background" hidden="{{!modalShow}}">
+	<view class="container">
+		<span class="iconfont iconguanbi" bind:tap="onClose"></span>
+		<!-- 插槽 -->
+		<view>
+			<slot name="modal-content"></slot>
+		</view>
+	</view>
+</view>

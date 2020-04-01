@@ -1,0 +1,20 @@
+<view class="musicDesc-container" style="background:url({{picUrl}}) center/cover no-repeat"></view>
+<view class="musicDesc-mask"></view>
+
+<view class="musicDesc-disc-box">
+  <!-- 封面信息 -->
+  <view class="musicDesc-disc {{isPlaying? 'play': ''}}" bind:tap="onChangeLyricShow" hidden="{{isLyricShow}}">
+    <image class="musicDesc-disc_img rotation {{isPlaying? '' :'rotation-pause'}}" src="{{picUrl}}"></image>
+  </view>
+
+  <!-- 歌词组件 -->
+  <r-lyric class="lyric" isLyricShow="{{!isLyricShow}}" lyric="{{lyric}}" bind:tap="onChangeLyricShow" />
+  <!-- 进度条组件 -->
+  <r-progress-bar class="progress-bar" bind:musicEnd="onNext" bind:timeUpdata="timeUpdata" bind:musicOnPlay="onPlay" bind:musicOnPause="onPause" isPlaying="{{isPlaying}}"/>
+  <!-- 控制面板 -->
+  <view class="musicDesc-control">
+    <text class="iconfont iconshangyishou" bind:tap="onPrev"></text>
+    <text class="iconfont {{isPlaying? 'iconzanting' : 'iconbofang' }}" bind:tap="changePlaying"></text>
+    <text class="iconfont iconxiayishou" bind:tap="onNext"></text>
+  </view>
+</view>

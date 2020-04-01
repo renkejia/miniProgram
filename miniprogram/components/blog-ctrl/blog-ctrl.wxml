@@ -1,0 +1,21 @@
+<view class="ctrl">
+	<view class="ctrl-item" bind:tap="onComment">
+		<span class="iconfont iconpinglun icon"></span>
+		<text>评论</text>
+	</view>
+	<view class="ctrl-item share">
+		<button open-type="share" data-blogid="{{blogid}}" data-blog="{{blog}}" class="share-btn" hover-class="share-hover">
+			<span class="iconfont iconfenxiang icon"></span>
+			<text>分享</text>
+		</button>
+	</view>
+</view>
+
+<r-login modalShow="{{loginShow}}" bind:loginSuccess="onLoginsuccess" bind:loginFail="onLoginfail" />
+
+<r-bottom-modal modalShow="{{showModal}}">
+	<view slot="modal-content">
+		<textarea name="content" class="comment-content" placeholder="写评论" value="{{content}}" fixed="true" bindinput="onInput"></textarea>
+		<button class="send" bindtap="onSend" >发送</button>
+	</view>
+</r-bottom-modal>

@@ -1,0 +1,29 @@
+<view class="blog-container">
+	<!-- 头部 -->
+	<view class="blog-header">
+		<view class="blog-publish-container" bind:tap="onPublish">
+			<span class="iconfont iconfabu"></span>
+		</view>
+		<view class="blog-seach-container">
+			<r-search iconfont="iconfont" icon-sousuo="iconsousuo" bind:search="onSearch" bind:onchange="onChange"/>
+		</view>
+	</view>
+
+	<!-- 博客内容 -->
+	<view class="blog-list">
+		<block wx:for="{{blogList}}" wx:key="_id">
+			<view class="blog-panel">
+				<r-blog-card blog="{{item}}" bindtap="goDetail" data-blogid="{{item._id}}" />
+				<!-- 评论 分享 -->
+				<r-blog-ctrl iconfont="iconfont"  blogid="{{item._id}}"
+				blog="{{item}}"
+        iconpinglun="iconpinglun" 
+        iconfenxiang="iconfenxiang"/>
+			</view>
+		</block>
+	</view>
+
+	<!-- 底部弹出框 -->
+	<r-login modalShow="{{modalShow}}" bind:loginSuccess="onLoginSuccess" bind:loginFail="onLoginFail">
+	</r-login>
+</view>

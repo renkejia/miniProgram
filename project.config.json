@@ -1,0 +1,91 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"enhance": true
+	},
+	"appid": "wxd2c93bf1f8c6946d",
+	"projectname": "music",
+	"libVersion": "2.10.3",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "db guide",
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "pages/musiclist/musiclist",
+					"pathName": "pages/musiclist/musiclist",
+					"query": "playlistId=2482210411",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/musicDesc/musicDesc",
+					"pathName": "pages/musicDesc/musicDesc",
+					"query": "musicid=1398663411&index=0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/blog/blog",
+					"pathName": "pages/blog/blog",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "blog-edit",
+					"pathName": "pages/blog-edit/blog-edit",
+					"query": "nickName=Jakoren&avatarUrl=https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqfAA1AJ…XFD94SDCVT3ib6LEKuEDKeH3fTtazG0A3M6hwdpiaU6BA/132",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/blog-detail",
+					"pathName": "pages/blog-detail/blog-detail",
+					"query": "blogid=42c9a7b15e81824200254aa56b3b190b",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/profile/profile",
+					"pathName": "pages/profile/profile",
+					"scene": null
+				}
+			]
+		}
+	}
+}

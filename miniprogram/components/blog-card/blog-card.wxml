@@ -1,0 +1,23 @@
+<view class="blog-card-container">
+  <!-- 博客内容头部 -->
+  <view class="blog-title">
+    <!-- 头像 -->
+    <image class="blog-title_avatar" src="{{blog.avatarUrl}}"></image>
+    <view class="blog-title_box">
+      <!-- 昵称 -->
+      <view class="blog-title_nickName">{{blog.nickName}}</view>
+      <!-- 发布时间 -->
+      <view class="blog-title_time">{{_createTime}}</view>
+    </view>
+  </view>
+  <!-- 博客内容 -->
+  <!-- 文字内容 -->
+  <view class="blog-content">{{blog.content}}</view>
+  <!-- 图片内容 -->
+  <view class="blog-img">
+    <block wx:for="{{blog.img}}" wx:key="*this">
+      <image class="img" src="{{item}}" mode="aspectFill" catchtap="onPriviewImg" data-img="{{blog.img}}" data-imgsrc="{{item}}"></image>
+    </block>
+  </view>
+
+</view>
